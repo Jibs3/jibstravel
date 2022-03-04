@@ -1,0 +1,172 @@
+body{
+    text-align: center;
+    font-family: QuickSand;
+}
+/* The styling of the navbar starts here */
+
+#navbar{
+    background-color: #6DAEDB;
+    color: white;
+}
+
+.navtext{
+    color: white;
+    padding-right: 50px;
+    font-size: 20px;
+}
+
+/* The styling of the navbar ends here */
+
+/* The styling of the home page starts here */
+#home{
+    /* background-image: url("../Images/LandingBackground.jpg"); */
+    height: 80%;
+}
+
+#LeftSideBackground{
+    background-image: url("../Images/LandingBackground.jpg");
+    height: 800px;
+}
+.mainBackground{
+    height: 100%;
+}
+#BackgroundWrapper{
+    height: 100%;
+}
+
+#RightSideBackground{
+    background-color: #2892d7;
+    height: 800px;
+}
+.WelcomeMessage{
+    color: azure;
+    font-weight: bold;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 30px;
+    top: 250px;
+    /* text-shadow: 2px 2px ; */
+
+}
+.header{
+    color: azure;
+    font-weight: bold;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 30px;
+    top: 250px;
+}
+
+
+/* The styling of the home page ends here */
+
+
+/* The styling of the about page starts here */
+.mainBackgroundAbout{
+    text-align: center;
+    background-image: url("../Images/Neist\ point\ lighthouse\ Scotland.jpg");
+    color: #1b4353;
+    height: 820px;
+}
+
+.locationMap{
+    
+}
+
+#AboutInfo{
+    padding-top: 50px;
+}
+
+/* The styling of the about page ends here */
+
+/* Register page styling starts here */
+
+.SignUpFormheader{
+    color: #1b4353;
+    font-weight: bold;
+
+}
+
+.LoginFormheader{
+    color: azure;
+    font-weight: bold;
+}
+
+.ReisterBackground{
+    background-image: url("../Images/Body\ of\ water\ during\ sunset.jpg");
+    height: 820px;
+    background-size:cover;
+}
+.LoginBackground{
+    background-image: url("../Images/sunset\ on\ lake.jpg");
+    height: 820px;
+    background-size:cover;
+}
+.SignUpform{
+    padding-top: 250px;
+    color: azure;
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 50%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    /* display: inline-block; */
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  label{
+      color: azure;
+  }
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    opacity: 0.9;
+  }
+  
+  button:hover {
+    opacity:1;
+  }
+
+  /* Float cancel and signup buttons and add an equal width */
+   .signupbtn {
+    align-items: center;
+    width: 20%;
+  }
+  
+  /* Add padding to container elements */
+  .container {
+    padding: 16px;
+  }
+  
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+  }
