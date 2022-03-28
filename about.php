@@ -10,18 +10,7 @@
     <title> About Jibbs Travel and Tour</title>
 </head>
 <body id="">
-    <nav id="navbar" class="navbar navbar-expand-lg">
-        <a class="navbar-brand navtext" href="/index.html">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="navtext" href="#">Travel Story</a>
-            <a class="navtext">Login</a>
-          </div>
-        </div>
-      </nav>
+<?php include("inc/header.php") ?>
       <div class="mainBackgroundAbout">
         <div class="row col-12" id="AboutInfo"> 
             <div>

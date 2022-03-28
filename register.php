@@ -30,7 +30,7 @@ if(isset($_POST["Submit"])){
     $_SESSION["ErrorMessage"]= "Username Exists. Try Another One! ";
     Redirect_to("register.php");
   }else{
-    // Query to insert new admin in DB When everything is fine
+    // Query to insert new user in DB When everything is fine
     global $ConnectingDB;
     $sql = "INSERT INTO users(datetime, Email, Username, Password)";
     $sql .= "VALUES(:dateTime, :eMail, :userName, :passworD)";

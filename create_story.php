@@ -12,10 +12,11 @@ Confirm_Login();
 
 if(isset($_POST["Submit"])){
     $user_id            = $_SESSION["UserId"];
+    $username            = $_SESSION["Username"];
     $story_title              = $_POST["story_title"];
     $travel_experience           = $_POST["travel_experience"];      
     $RandImGen                = ImageNameChange(20);
-    $image                     = $RandImGen .'.jpg';
+    $image                     = "uploads/story_images/". $RandImGen .'.jpg';
     $Temp_Image                 = $_FILES["image"]["tmp_name"];
     $Target_Image       = "uploads/story_images/".basename($image);
     date_default_timezone_set("Africa/Lagos");
@@ -28,14 +29,15 @@ if(isset($_POST["Submit"])){
   }else{
     // Query to insert new admin in DB When everything is fine
     global $ConnectingDB;
-    $sql = "INSERT INTO stories(datetime, user_id, story_title, image, travel_experience)";
-    $sql .= "VALUES(:dateTime, :userId, :storyTitle, :imaGe, :travel_experiencE)";
+    $sql = "INSERT INTO stories(datetime, user_id, story_title, image, travel_experience, username)";
+    $sql .= "VALUES(:dateTime, :userId, :storyTitle, :imaGe, :travel_experiencE, :userName )";
     $stmt = $ConnectingDB->prepare($sql);
     $stmt->bindValue(':dateTime', $DateTime);
     $stmt->bindValue(':userId', $user_id);
     $stmt->bindValue(':storyTitle', $story_title);
     $stmt->bindValue(':imaGe', $image);   
-    $stmt->bindValue(':travel_experiencE', $travel_experience);   
+    $stmt->bindValue(':travel_experiencE', $travel_experience); 
+    $stmt->bindValue(':userName', $username);   
     $Execute=$stmt->execute();
     move_uploaded_file($Temp_Image, $Target_Image);
     if($Execute){

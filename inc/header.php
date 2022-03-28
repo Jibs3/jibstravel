@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">        
         <a class="navtext" href="about.php">About</a>
-        <a class="navtext" href="#">Travel Story</a>
+        <!-- <a class="navtext" href="#">Travel Story</a> -->
         <a class="navtext" href="login.php">Login</a>
         <a class="navtext" href="register.php">Register</a>
         <?php if(isset($_SESSION["UserId"])){ ?>
@@ -16,3 +16,4 @@
     </div>
 </nav>
 
+ 

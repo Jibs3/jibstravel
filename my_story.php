@@ -32,14 +32,33 @@ Confirm_Login();
           <a class="btn btn-warning" href="create_story.php">Create Stories</a>
         </div>
       </div>
-      <div class="card mb-3 mt-5">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+          <?php
+              $my_id = $_SESSION["UserId"];
+              global $ConnectingDB;
+              $sql = "SELECT * FROM stories WHERE user_id = '$my_id' ORDER BY id asc";
+              $Execute =$ConnectingDB->query($sql);
+              $SrNo = 0;
+              while ($DataRows=$Execute->fetch()) {
+              $id                = $DataRows["id"];
+              $user_id           = $DataRows["user_id"];               
+              $story_title        = $DataRows["story_title"];
+              $image              = $DataRows["image"];
+              $travel_experience   = $DataRows["travel_experience"];
+              $datetime           = $DataRows["datetime"];
+              $username           = $DataRows["username"];              
+          ?>
+        <div class="card mb-3 mt-5">
+          <img src="<?php echo htmlentities($image); ?>" class="card-img-top" height="500" alt="Story_Image">
+          <div class="card-body">
+            <h5 class="card-title"><?php echo htmlentities($story_title); ?></h5>
+            <p class="card-text"><?php echo htmlentities($travel_experience); ?></p>
+            <p class="card-text"><small class="text-muted"><?php echo htmlentities($datetime); ?></small></p>
+            <p class="card-text">Posted By: <small class="text-muted"><i><?php echo htmlentities($username); ?> </i></small></p>
+          </div>
         </div>
-      </div>
+        <?php }?>
+
     </div>
 
 
